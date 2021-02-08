@@ -8,7 +8,6 @@ public class CameraController : MonoBehaviour
 {
     private float speed = 2f;
     private float mouseX, mouseY;
-    private Quaternion camRotation;
 
     [SerializeField] private Transform player;
     private Vector3 offset;
@@ -19,7 +18,6 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         offset = transform.position - player.position;
-        camRotation = transform.rotation;
     }
 
     ///<summary>
@@ -46,11 +44,15 @@ public class CameraController : MonoBehaviour
     ///</summary>
     private void Rotation()
     {
-        mouseX += Input.GetAxis("Mouse X") * speed;
-        camRotation.y -= Input.GetAxis("Mouse Y") * speed;
-        camRotation.y = Mathf.Clamp(camRotation.y, 0f, 75f);
-        transform.LookAt(player);
-        transform.rotation = Quaternion.Euler(camRotation.y, mouseX, 0f);
-        transform.position = player.position + offset;
+        mouseX = Input.GetAxis("Mouse X");
+        mouseY = -Input.GetAxis("Mouse Y");
+        Debug.Log(offset);
+        if (offset.z > 0f)
+            mouseY = Input.GetAxis("Mouse Y");
+        Quaternion angleX = Quaternion.AngleAxis(mouseX * speed, Vector3.up);
+        Quaternion angleY = Quaternion.AngleAxis(mouseY * speed, Vector3.right);
+        offset.y = Mathf.Clamp(offset.y, 0f, 4f);
+        offset = angleX * offset;
+        offset = angleY * offset;
     }
 }

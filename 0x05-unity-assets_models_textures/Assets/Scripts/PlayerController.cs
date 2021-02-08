@@ -30,7 +30,6 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump") && !isJumping) Jump();
         Movement();
-        ResetPosition();
     }
 
     ///<summary>
@@ -55,15 +54,6 @@ public class PlayerController : MonoBehaviour
         //rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         rb.velocity = Vector3.up * jumpForce * Time.deltaTime;
         isJumping = true;
-    }
-
-    ///<summary>
-    /// Resets the position at the start of the game
-    ///</summary>
-    private void ResetPosition()
-    {
-        if (transform.position.y < -5)
-            transform.position = new Vector3(0f, 5f, 0f);
     }
 
     private void OnCollisionEnter(Collision collision)
