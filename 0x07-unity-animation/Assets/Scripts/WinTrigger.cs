@@ -15,6 +15,7 @@ public class WinTrigger : MonoBehaviour
             timer.StopTimer();
             timer.Win();
             canvas.SetActive(true);
+            Cursor.visible = true;
         }
     }
 }

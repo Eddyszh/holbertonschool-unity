@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 0d52b3603f150a244a12d8b8dfd7b260, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 45204619}
   - component: {fileID: 45204618}
   - component: {fileID: 45204621}
+  - component: {fileID: 45204622}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -215,6 +216,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff5cd052b084d3b458af57fc081ced65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &45204622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45204617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9bd6072e91fd384dae99751caaf0fe8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!224 &82055868 stripped
@@ -1358,6 +1371,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2054930736}
     m_Modifications:
+    - target: {fileID: 4944808211840941080, guid: 03d6f5feab53c1a4188d4f8c64e6539f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4944808211840941080, guid: 03d6f5feab53c1a4188d4f8c64e6539f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4944808211840941080, guid: 03d6f5feab53c1a4188d4f8c64e6539f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4944808211840941080, guid: 03d6f5feab53c1a4188d4f8c64e6539f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 45204622}
+    - target: {fileID: 4944808211840941080, guid: 03d6f5feab53c1a4188d4f8c64e6539f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 4944808211840941080, guid: 03d6f5feab53c1a4188d4f8c64e6539f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4944808211840941081, guid: 03d6f5feab53c1a4188d4f8c64e6539f,
         type: 3}
       propertyPath: m_LocalPosition.x
