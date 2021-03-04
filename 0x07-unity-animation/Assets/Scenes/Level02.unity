@@ -38,13 +38,13 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.9847303, g: 0.5213258, b: 0.34162718, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 1
+  m_GIWorkflowMode: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -523,6 +523,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3, y: 0.3, z: 3}
   m_Center: {x: -1.5, y: 0.15, z: -1.5}
+--- !u!114 &157290681 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -4435673733917645446, guid: e07782b09cdc8f34798e10437b1aea72,
+    type: 3}
+  m_PrefabInstance: {fileID: 960325557}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78f955d09cc95a247bcf429fc6f25bf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &160344725 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8a1c87f3b4db6b44eb9d281b4386d408,
@@ -5621,6 +5633,7 @@ GameObject:
   - component: {fileID: 1577519420}
   - component: {fileID: 1577519419}
   - component: {fileID: 1577519418}
+  - component: {fileID: 1577519422}
   m_Layer: 0
   m_Name: CutsceneCamera
   m_TagString: Untagged
@@ -5712,6 +5725,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1577519422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577519417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42cfd3145252809448d32816f6332bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 157290681}
+  mainCamera: {fileID: 946561789}
+  timerCanvas: {fileID: 2055430265}
 --- !u!4 &1589490047 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8a1c87f3b4db6b44eb9d281b4386d408,
@@ -7407,6 +7435,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4cf63a03115a86e41925389a941636a2,
     type: 3}
   m_PrefabInstance: {fileID: 355559495}
+  m_PrefabAsset: {fileID: 0}
+--- !u!223 &2055430265 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 2181057610114233500, guid: 19bb886b7c4e2734689534c38b867c9d,
+    type: 3}
+  m_PrefabInstance: {fileID: 99743643}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &2075112508 stripped
 Transform:

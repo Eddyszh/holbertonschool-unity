@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     private float jumpForce = 10f;
     private float speed = 6f;
     private Vector3 movement;
+    private bool isFalling = false;
 
     CharacterController controller;
     public static bool isInputEnabled = true;
@@ -68,8 +69,16 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     private void ResetPosition()
     {
-        anim.SetBool("isFalling", transform.position.y < -5f ? true : false);
         if (transform.position.y < -10f)
-            transform.position = (new Vector3(0f, 10f, 0f));
+        {
+            transform.position = new Vector3(0f, 20f, 0f);
+            isFalling = true;
+            anim.SetBool("isFalling", isFalling);
+        }
+        else if (isFalling = true && controller.isGrounded)
+        {
+            isFalling = false;
+            anim.SetBool("isFalling", isFalling);
+        }
     }
 }
