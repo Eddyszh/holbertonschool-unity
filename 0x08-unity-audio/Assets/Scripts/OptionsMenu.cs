@@ -14,7 +14,7 @@ public class OptionsMenu : MonoBehaviour
     [SerializeField] private Toggle toggle;
     [SerializeField] private Slider bgmSlider;
     [SerializeField] private Slider sfxSlider;
-    private int value;
+    private int value = 0;
 
     private void Awake()
     {

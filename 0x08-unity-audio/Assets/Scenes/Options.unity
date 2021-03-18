@@ -478,7 +478,7 @@ MonoBehaviour:
   m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.0001
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -1250,7 +1250,7 @@ MonoBehaviour:
   m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.001
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -2131,8 +2131,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e47cc07a857429a43822c632d390a55c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkClips: []
-  fallClips: []
+  walkClip: {fileID: 0}
+  fallClip: {fileID: 0}
   paused: {fileID: -4113913975964476950, guid: f6209a647c4e8cc4d99c64b65b67f60e, type: 2}
   unpaused: {fileID: -3615794861033621981, guid: f6209a647c4e8cc4d99c64b65b67f60e,
     type: 2}
